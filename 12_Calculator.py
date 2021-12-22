@@ -13,13 +13,21 @@ second.grid(column=0, row=1)
 result=tk.Label(text="Результат")
 result.grid(column=0, row=2, padx=15, pady=20)
 
-firstEntry = tk.Entry()
-firstEntry.grid(column=1, row=0)
-secondEntry = tk.Entry() 
-secondEntry.grid(column=1, row=1)
-resultLabel = tk.Label(text= "")
-resultLabel.grid(column=1,row=2)
+first_entry = tk.Entry()
+first_entry.grid(column=1, row=0)
+second_entry = tk.Entry() 
+second_entry.grid(column=1, row=1)
+result_label = tk.Label(text= "")
+result_label.grid(column=1,row=2, sticky="w")
 
-button=tk.Button(window,text="Вычислить сумму")
+def get_multiply():
+    a=int(first_entry.get())
+    b=int(second_entry.get())
+    c=a*b
+    
+    result_label['text']=c
+
+
+button=tk.Button(window,text="Вычислить произведение", command=get_multiply)
 button.grid(column=1, row=3)
 window.mainloop()
