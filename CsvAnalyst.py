@@ -27,8 +27,12 @@ label_21 = tk.Label(text = "")
 label_21.grid(row=2, column=1, sticky="w")
 
 # Окно вывода текста с прокруткой
-output_text = st(height=20, width=50)
+output_text = st(height = 20, width= 50)
 output_text.grid(row=3, column=1, padx=10, pady=10, sticky="w")
+
+# Создание кнопки
+button=tk.Button(window, text="Прочитать файл") 
+button.grid(row=4, column=1) 
 
 # Запуск цикла mainloop 
 window.mainloop()
