@@ -30,6 +30,10 @@ label_20.grid(row=2, column=0, padx=10, pady=10, sticky="e")
 label_21 = tk.Label(text = "")
 label_21.grid(row=2, column=1, sticky="w")
 
+# Создание текстого вывода
+output_text = tk.Text(height = 20, width= 50)
+output_text.grid(row=3, column=1, padx=10, pady=10, sticky="w")
+
 # Окно вывода текста с прокруткой
 output_text = st(height = 20, width= 50)
 output_text.grid(row=3, column=1, padx=10, pady=10, sticky="w")
